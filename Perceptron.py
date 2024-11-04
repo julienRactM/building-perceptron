@@ -8,7 +8,7 @@ from sklearn.linear_model import Perceptron
 class Perceptron_v0(object):
     pass
     """
-    This one is made based on the medium.com tutorial here:
+    This one is made based on the medium.com tutorial here with some adjustments:
     https://medium.com/@becaye-balde/perceptron-building-it-from-scratch-in-python-15716806ef64
     hard to manage typehint on this object so not a priority
 
