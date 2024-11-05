@@ -12,7 +12,7 @@ def test_iqr_range_target_filter():
     filtered_df = iqr_range_target_filter(df, 'price')
 
     # Assert that the outlier (1000) is removed
-    assert 1000 not in filtered_df['price'].values
+    assert 1000 not in filtered_df['price'].values # 1000 est un outlier qui n'a pas été retiré
 
     # Assert that the number of rows is less than the original due to outlier removal
     assert filtered_df.shape[0] < df.shape[0]
