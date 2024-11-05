@@ -7,3 +7,28 @@ def iqr_range_target_filter(df, price_column):
     print("old number of rows", df.shape[0])
     print("new number of rows", new_df.shape[0])
     return new_df
+
+
+def compare_feature_lists(list1, list2):
+    """
+    # Example usage:
+    list1 = ['feature1', 'feature2', 'feature3', 'feature4']
+    list2 = ['feature3', 'feature4', 'feature5', 'feature6']
+
+    common, unique = compare_feature_lists(list1, list2)
+    print("Common Elements:", common)
+    print("Unique Elements:", unique)
+
+    renvoie
+
+    Common Elements: ['feature4', 'feature3']
+    Unique Elements: ['feature1', 'feature2', 'feature6', 'feature5']
+
+    """
+    # Find common elements (present in both lists)
+    common_elements = list(set(list1) & set(list2))
+
+    # Find unique elements (present in only one of the lists)
+    unique_elements = list(set(list1) ^ set(list2))
+
+    return common_elements, unique_elements

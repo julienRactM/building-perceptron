@@ -1,6 +1,8 @@
 import pandas as pd
 
-from functions import iqr_range_target_filter
+from typing import Tuple, List
+
+from functions import iqr_range_target_filter, compare_feature_lists
 
 def test_iqr_range_target_filter():
     # Create a DataFrame with some outliers
@@ -27,3 +29,14 @@ def test_iqr_range_target_filter():
 
     # Assert that the number of rows remains the same
     assert filtered_df_no_outliers.shape[0] == df_no_outliers.shape[0]
+
+
+def test_compare_feature_lists():
+        # Example usage:
+    list1 = ['feature1', 'feature2', 'feature3', 'feature4']
+    list2 = ['feature3', 'feature4', 'feature5', 'feature6']
+
+    common, unique = compare_feature_lists(list1, list2)
+
+    assert common ==  ['feature4', 'feature3'] # features in common aren't properly returned
+    assert unique ==  ['feature1', 'feature2', 'feature6', 'feature5'] # unique features aren't properly returned
