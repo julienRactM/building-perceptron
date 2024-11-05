@@ -19,6 +19,10 @@ python pandas etc
 
 ## Note à l'équipe:
 
+Méthode pour importer un fichier sur une autre branche:
+aller sur la branche vers laquelle l'on veut copier le fichier
+git checkout NomBrancheOuEstLeFichier -- file(avec extensions)
+
 
 
 - Idéalement on ne va travailler que sur deux branches principales et le moins de fichiers possibles, évitons les branches julien et julien_notebook.ipynb
