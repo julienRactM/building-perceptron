@@ -12,11 +12,6 @@ Julien Ract-Mugnerot
 python pandas etc
 
 
-
-
-
-
-
 ## Note à l'équipe:
 
 Méthode pour importer un fichier sur une autre branche:
