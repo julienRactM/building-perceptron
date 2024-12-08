@@ -1,3 +1,5 @@
+from collections import Counter
+
 # price_column is a str name of the numeric column
 def iqr_range_target_filter(df, price_column):
     q3 = df.price.describe()['75%']
@@ -9,26 +11,36 @@ def iqr_range_target_filter(df, price_column):
     return new_df
 
 
-def compare_feature_lists(list1, list2):
+def compare_feature_lists(*lists):
     """
     # Example usage:
     list1 = ['feature1', 'feature2', 'feature3', 'feature4']
     list2 = ['feature3', 'feature4', 'feature5', 'feature6']
+    list3 = ['feature2', 'feature4', 'feature7']
 
-    common, unique = compare_feature_lists(list1, list2)
-    print("Common Elements:", common)
-    print("Unique Elements:", unique)
+    in_all, in_at_least_two, in_only_one = compare_feature_lists(list1, list2, list3)
+    print("Elements in all lists:", in_all)
+    print("Elements in at least two lists:", in_at_least_two)
+    print("Elements in only one list:", in_only_one)
 
     renvoie
 
-    Common Elements: ['feature4', 'feature3']
-    Unique Elements: ['feature1', 'feature2', 'feature6', 'feature5']
+    Elements in all lists: ['feature4']
+    Elements in at least two lists: ['feature2', 'feature3', 'feature4']
+    Elements in only one list: ['feature1', 'feature5', 'feature6', 'feature7']
 
     """
-    # Find common elements (present in both lists)
-    common_elements = list(set(list1) & set(list2))
+    # Flatten the list of lists and count occurrences of each element
+    all_elements = [item for sublist in lists for item in sublist]
+    element_counts = Counter(all_elements)
 
-    # Find unique elements (present in only one of the lists)
-    unique_elements = list(set(list1) ^ set(list2))
+    # Elements in all lists
+    in_all_lists = [item for item, count in element_counts.items() if count == len(lists)]
 
-    return common_elements, unique_elements
+    # Elements in at least two lists
+    in_at_least_two_lists = [item for item, count in element_counts.items() if count >= 2]
+
+    # Elements in only one list
+    in_only_one_list = [item for item, count in element_counts.items() if count == 1]
+
+    return in_all_lists, in_at_least_two_lists, in_only_one_list
