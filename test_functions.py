@@ -21,7 +21,7 @@ def test_iqr_range_target_filter():
 
     # Create a DataFrame without outliers
     df_no_outliers = pd.DataFrame({
-        'price': [100, 150, 200, 250, 300]
+        'price': [100, 150, 200, 250, 300, 400]
     })
 
     # Call the function again
@@ -35,8 +35,10 @@ def test_compare_feature_lists():
         # Example usage:
     list1 = ['feature1', 'feature2', 'feature3', 'feature4']
     list2 = ['feature3', 'feature4', 'feature5', 'feature6']
+    list3 = ['feature3', 'feature6', 'feature7', 'feature8']
 
-    common, unique = compare_feature_lists(list1, list2)
+    common, atleast_in_two, unique = compare_feature_lists(list1, list2, list3)
 
-    assert common ==  ['feature4', 'feature3'] # features in common aren't properly returned
-    assert unique ==  ['feature1', 'feature2', 'feature6', 'feature5'] # unique features aren't properly returned
+    assert common == ['feature3'] # common features aren't properly returned
+    assert atleast_in_two ==  ['feature3', 'feature4', 'feature6'] # features in at least two lists aren't properly returned
+    assert unique ==  ['feature1', 'feature2', 'feature5', 'feature7', 'feature8'] # unique features aren't properly returned
