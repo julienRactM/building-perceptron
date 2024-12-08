@@ -2,51 +2,51 @@
 ## The project
 
 
-Ce projet vise à présenter les bases du deep learning, en implémentant un algorithme du perceptron. Pour cela, il est nécessaire de comprendre les notions de Machine Learning et de Deepl Learning, toutes deux liées à l'Intelligence Artificielle, et de pouvoir clairement les distinguer.
+Ce projet vise à présenter les bases du deep learning, en implémentant un algorithme du perceptron. Pour cela, il est nécessaire de comprendre les notions de Machine Learning et de Deep Learning, toutes deux liées à l'Intelligence Artificielle, et de pouvoir clairement les distinguer.
 
-### Définitions
+## Définitions
 
-Le Machine Learning (apprentissage automatique), est branche de l'IA qui permet, à travers des algorithmes et des modèles statistiques, d'analyser des données (ensemble d'apprentissage) pour en apprendre de ces données, afin d'appliquer le modèle d'apprentissage pour prendre des décisions sur d'autres données non présente dans l'ensemble d'apprentissage. 
+Le Machine Learning (apprentissage automatique) est une branche de l'IA qui permet, à travers des algorithmes et des modèles statistiques, d'analyser des données (ensemble d'apprentissage) pour en apprendre en termes d'information, afin d'appliquer le modèle d'apprentissage dans le but de prendre des décisions sur d'autres données non présentes dans l'ensemble d'apprentissage. 
 
-Le Deep Learning quant à lui, même s'il est une forme de Machine Learning, consiste à structurer des algorithmes en couches, pour créer un réseau de neurones artificiel, capables d'apprendre et de prendre des décisions intelligentes de façon autonome. On parle de réseau de neurones artificiel, car il s'inspire du fonctionnement du cerveau humain.
+Le Deep Learning quant à lui, même s'il est une forme de Machine Learning, consiste à structurer des algorithmes en couches, pour créer un réseau de neurones artificiel, capable d'apprendre et de prendre des décisions intelligentes de façon autonome. On parle de réseau de neurones artificiel, car il s'inspire du fonctionnement du cerveau humain.
 
 
-### Comparaison
+## Comparaison: Machine Learning vs Deep Learning
 
-A partir de leurs définitions respectives, on peut ressortir des différences particulières entre ces deux notions. En termes de complexité, le Machine Learning fait souvent appel à des modèles simples (regressions, KNN, arbres de décisions, SVM, etc.). Quant au Deepl Learning, il nécessite l'utilisation de modèles beaucoup plus complexes, due à la profondeur des réseaux de neurones (CNN, GAN, etc.)
+A partir de leurs définitions respectives, on peut ressortir des différences particulières entre ces deux notions. En termes de complexité, le Machine Learning fait souvent appel à des modèles simples (regressions, KNN, arbres de décisions, SVM, etc.). Quant au Deep Learning, il nécessite l'utilisation de modèles beaucoup plus complexes, due à la profondeur des réseaux de neurones (CNN, GAN, etc.)
 De plus, les algorithmes de Deep Learning sont capables d'une sélection de variables (features) presque totalement automatique, à travers la mesure de l'importance de chaque caractéristique. La différence avec le Machine Learning est que dans ce cas, cette sélection est souvent basée sur un choix de l'utilisateur. Même si ce choix se fait à partir de métodes statistiques, il reste en grande partie subjectif face à la sélection faite en Deep Learning.
-Par conséquent, les algorithmes de Deep Learning ont besoin de plus gros volumes de données pour une sélection de variables plus pertinente (problème de dimensionalité); ce qui représente aussi une grande différence avec le Machine Learning.
+Par conséquent, les algorithmes de Deep Learning ont besoin de plus gros volumes de données pour une sélection de variables plus pertinente (problème de dimensionalité).
 
-### Situations où il faut privilégier l'un ou l'autre
+## Situations où il faut privilégier l'un ou l'autre
 
-On choisira des méthodes de Machine Learning plûtot que celles de Deep Learning lorsqu'on ne dispose pas d'assez de données, ce qui peut être difficile à déterminer. En général, l'analyse de données complexes (en taille et/ou en structure de données) oriente le travail vers le Deepl Learning, surtout si on dispose d'une puissance de calcul considérable.
+On choisira des méthodes de Machine Learning plûtot que celles de Deep Learning lorsqu'on ne dispose pas d'assez de données, ce qui peut être difficile à déterminer. En général, l'analyse de données complexes (en taille et/ou en structure de données) oriente le travail vers le Deep Learning, surtout si on dispose d'une puissance de calcul considérable.
 De plus, les modèles basiques de Machine Learning (régressions par exemple), permettent d'interprèter clairement les résultats en termes d'effet causal des variables explicatives sur la variable cible; ce qui est n'est pas le cas lorsqu'on utilise des modèles de Deep Learning. Pour cela, on utilisera des modèles de Machine Learning si on cherche à interprèter le modèle d'une façon causale, et les modèles de Deep Learning lorsque l'objectif principal est la sélection de caractéristiques pertinentes.
 
 
 Une fois que les notions de Machine Learning et de Deep Learning ont été éclaircies, nous présentons trois (03) différentes applications du Deep Learning:
 
-# Application 1: Traitement du Langage Naturel (Natural Language Processing)
+## Application 1: Traitement du Langage Naturel (Natural Language Processing)
 
 Le Deep Learning est utilisé dans les tâches de traduction automatique de texte, à travers l'algorithme RNN (réseaux de neurones récurrents). Le mécanisme se base sur la capacité de l'algorithme à garder en mémoire la séquence de texte précédente, et à se baser sur la traduction de cette séquence pour traiter la séquence suivante. Par exemple, pour traduire une phrase de 10 mots, l'algorithme va en premier parcourir la phrase, et former un vecteur de taille 10 comportant les mots de la phrase. Ensuite, ce vecteur sera utilisé pour traduire chacun des mots dans la langue cible, en considérant les traductions déjà générées des séquences précédentes, ainsi que la probabilité que le mot suivant ait une certaine signification selon le contexte de la phrase.
 
 
-# Application 2: Reconnaissance d'objets (avec Google Lens par exemple)
+## Application 2: Reconnaissance d'objets (avec Google Lens par exemple)
 
-Les réseaux de neurones convolutionnels (CNN), dans leur forme améliorée R-CNN (regions with CNN features), sont utilisées dans la détection d'objets. Pour une image en entrée, à l'entraînement, la première étape est d'utiliser un algorithme pour générer environs 2000 régions ayant une forte probabilité de contenir les objets recherchés. Ensuite, dans une étape de classification, les régions découpées sont redimensionnées, et le CNN est utilisé pour extraire les features (caractéristiques des objets recherchés) de l'image initiale entière. On utilise ensuite un SVM pour classer chaque région dans l'une des catégories d'objets prédéfinies (un SVM par catégorie), et un BBR (Bounding Box Regressor) pour prédire et affiner les coordonnées de chaque régions selon les caractéristiques sélectionnées.
+Les réseaux de neurones convolutionnels (CNN), dans leur forme améliorée R-CNN (regions with CNN features), sont utilisés dans la détection d'objets. Pour une image en entrée, à l'entraînement, la première étape est d'utiliser un algorithme pour générer environs 2000 régions ayant une forte probabilité de contenir les objets recherchés. Ensuite, dans une étape de classification, les régions découpées sont redimensionnées, et le CNN est utilisé pour extraire les features (caractéristiques des objets recherchés) de l'image initiale entière. On utilise ensuite un SVM pour classer chaque région dans l'une des catégories d'objets prédéfinies (un SVM par catégorie), et un BBR (Bounding Box Regressor) pour prédire et affiner les coordonnées de chaque régions selon les caractéristiques sélectionnées.
 
-# Application 3: NotebookLM de Google
+## Application 3: NotebookLM de Google
 
 Cet outil d'IA de Google permet de faire des recherches dans des documents en détectant le texte dans des images. Après un prétraitement des images visant à supprimer le bruit et à améliorer le texte, un réseau de neurones convolutionnel (CNN) est utilisé pour extraire le texte des images. Ce texte est ensuite analysé et indexé pour permettre de retrouver plus rapidement les réponses aux questions posées par l'utilisateur.
 
 En s'intéressant particulièrement au perceptron dans le cadre de ce projet, voici quelques éléments permettant de comprendre son fonctionnement.
 
-# Définition du perceptron et lien avec le neurone biologique
+## Définition du perceptron et lien avec le neurone biologique
 
-Le perceptron est un modèle mathématique inspiré par le fonctionnement du neurone biologique, introduit par Frank Rosenblatt en 1957, et considéré comme le précurseur des réseaux de neurones profonds. Il fonctionne comme un neurone biologique, car il reçoit une information en entrée (valeurs numériques), et produit une sortie unique; comme le neurone biologique qui reçoit des signaux par les dendrites, et emet un signal par l'axone. De plus, l'information en entrée a un poids dans les deux cas: pour le neurone biologique, il s'agit de l'intensité de la connexion entre les synapses de deux ou plusieurs neurones connectés; le perceptron quant à lui, assigne des poids à caque entrée, représentant l'importance de cette entrée dans la réponse en sortie. Enfin, un neurone biologique ne déclenche un signal que si le potentiel électrique accumulé dépasse un certain seuil, ce qui est très semblable au perceptron qui, à travers une fonction seuil (fonction d'activation), détermine la sortie binaire.
+Le perceptron est un modèle mathématique inspiré par le fonctionnement du neurone biologique, introduit par Frank Rosenblatt en 1957, et considéré comme le précurseur des réseaux de neurones profonds. Il fonctionne comme un neurone biologique, car il reçoit une information en entrée (valeurs numériques), et produit une sortie unique; comme le neurone biologique qui reçoit des signaux par les dendrites, et emet un signal par l'axone. De plus, l'information en entrée a un poids dans les deux cas: pour le neurone biologique, il s'agit de l'intensité de la connexion entre les synapses de deux ou plusieurs neurones connectés; le perceptron quant à lui, assigne des poids à chaque entrée, représentant l'importance de cette entrée dans la réponse en sortie. Enfin, un neurone biologique ne déclenche un signal que si le potentiel électrique accumulé dépasse un certain seuil, ce qui est très semblable au perceptron qui, à travers une fonction seuil (fonction d'activation), détermine la sortie binaire.
 
-# Fonction matématique du perceptron
+## Fonction matématique du perceptron
 
-La fonction mathématique du perceptron est: y = f(∑(wi * xi) + b, avec:
+La fonction mathématique du perceptron est: y = f(∑(wi * xi)) + b, avec:
 - y la sortie du perceptron (0 ou 1)
 - f() la fonction d'activation
 - wi le poids associé à la i-ème entrée
@@ -56,7 +56,7 @@ La fonction mathématique du perceptron est: y = f(∑(wi * xi) + b, avec:
 
  En ce qui concerne l'usage du perceptron, il permet de classer des données en deux catégories; par exemple, il peut être utilisé pour la détection de spams, la reconnaissance d'images, et le traitement du langage naturel (analyse de sentiment positif ou négatif dans un discours).
 
- # Règles d'apprentissage du perceptron
+## Règles d'apprentissage du perceptron
 
  - Apprentissage par Renforcement Hebbien (Perceptron à seuil): Pour une entrée Ak = (xk, ŷk), mise à jour des poids et du seuil en fonction de la différence entre la sortie calculée y et la sortie désirée ŷ; 
 wi_nouveau = wi_ancien + λ * (ŷk - yk) * xik
@@ -81,7 +81,7 @@ t représente l'itération actuelle.
 La méthode ajuste les poids et le seuil dans la direction opposée au gradient de la fonction objectif. Cela permet de converger vers un minimum de la fonction objectif, ce qui correspond à une minimisation de l'erreur de classification.
 
 
-# Fonction d'activation classique
+## Fonction d'activation classique
 
 Il s'agit de la fonction sigmoïde, définit comme suit: f(x) = 1 / (1 + e^(-x))
 
@@ -89,9 +89,10 @@ où x est la somme des produits des poids des connexions entre les entrées et l
 
 Elle prend les valeurs 0 ou 1 selon les entrées du perceptron.
 
-# Processus d'entraînement du perceptron
+## Processus d'entraînement du perceptron
 
 Il se déroule en sept (07) étapes:
+
 a- initialisation des poids et du seuil avec des valeurs aléatoires ou prédéfinies;
 
 b- introduction d'un exemple d'apprentissage composé d'un vecteur d'entrée (xk) et de la sortie désirée (ŷk);
@@ -110,7 +111,7 @@ g- critère d'arrêt: Le processus d'apprentissage se poursuit jusqu'à ce qu'un
   - nombre maximal d'itérations atteint: le processus d'apprentissage s'arrête après un nombre prédéfini d'itérations, même si tous les exemples ne sont pas correctement classifiés;
   - gradient de la fonction objectif inférieur à une valeur seuil: pour les perceptrons continus, l'apprentissage s'arrête lorsque le gradient de la fonction objectif est suffisamment petit, indiquant que l'erreur de classification est minimisée.
 
-# Limites du perceptron
+## Limites du perceptron
 
 a- Séparabilité linéaire: le perceptron ne peut classifier correctement que des ensembles de données linéairement séparables. Cela signifie qu'il est incapable de trouver une solution pour des problèmes où les classes ne peuvent pas être divisées par une ligne droite (en deux dimensions) ou un hyperplan (en dimensions supérieures);
 
