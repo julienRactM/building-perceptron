@@ -44,7 +44,7 @@ En s'intéressant particulièrement au perceptron dans le cadre de ce projet, vo
 
 Le perceptron est un modèle mathématique inspiré par le fonctionnement du neurone biologique, introduit par Frank Rosenblatt en 1957, et considéré comme le précurseur des réseaux de neurones profonds. Il fonctionne comme un neurone biologique, car il reçoit une information en entrée (valeurs numériques), et produit une sortie unique; comme le neurone biologique qui reçoit des signaux par les dendrites, et emet un signal par l'axone. De plus, l'information en entrée a un poids dans les deux cas: pour le neurone biologique, il s'agit de l'intensité de la connexion entre les synapses de deux ou plusieurs neurones connectés; le perceptron quant à lui, assigne des poids à chaque entrée, représentant l'importance de cette entrée dans la réponse en sortie. Enfin, un neurone biologique ne déclenche un signal que si le potentiel électrique accumulé dépasse un certain seuil, ce qui est très semblable au perceptron qui, à travers une fonction seuil (fonction d'activation), détermine la sortie binaire.
 
-## Fonction matématique du perceptron
+## Fonction mathématique du perceptron
 
 La fonction mathématique du perceptron est: y = f(∑(wi * xi)) + b, avec:
 - y la sortie du perceptron (0 ou 1)
