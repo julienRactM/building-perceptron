@@ -29,7 +29,7 @@ def test_activation_function(perceptron):
 def test_predict(perceptron):
     perceptron.weights = np.array([0.5, 1, -1, 0.5, -0.5])  # Biais, poids1, poids2, poids3, poids4
     assert perceptron.predict(np.array([5.1, 3.5, 1.4, 0.2])) == 1
-    assert perceptron.predict(np.array([6.3, 3.3, 6.0, 2.5])) == 0
+    assert perceptron.predict(np.array([0, 1.3, 2.0, 2.5])) == 0
 
 def test_train():
     perceptron = Perceptron_v1(num_inputs=4, num_epochs=1000)
