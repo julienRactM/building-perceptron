@@ -5,6 +5,10 @@
 
 Ce projet vise à présenter les bases du deep learning, en implémentant un algorithme du perceptron. Pour cela, il est nécessaire de comprendre les notions de Machine Learning et de Deep Learning, toutes deux liées à l'Intelligence Artificielle, et de pouvoir clairement les distinguer.
 
+## Lien de la présentation
+
+https://docs.google.com/presentation/d/15DfUIZVgb74gHu17B-tNhWLndEHTNgTQhsP9vbFn3cY/edit#slide=id.g2bad0d95074_0_1653
+
 ## Définitions
 
 Le Machine Learning (apprentissage automatique) est une branche de l'IA qui permet, à travers des algorithmes et des modèles statistiques, d'analyser des données (ensemble d'apprentissage) pour en apprendre en termes d'information, afin d'appliquer le modèle d'apprentissage dans le but de prendre des décisions sur d'autres données non présentes dans l'ensemble d'apprentissage.
